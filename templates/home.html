@@ -61,15 +61,22 @@
     <div class="container">
         <h1 class="text-center mt-3 mb-3">Glassdoor Careers</h1>
         <image class="img-fluid" id="banner" src="static\pexels-pixabay-326576.jpg"></image>
-        <h2 class="text-center mt-3 mb-3">About Glassdoor</h2>
-        <p class="lead">
-            Glassdoor is a website where current and former employees anonymously review companies. It provides a
-            platform for job seekers to explore company cultures, salary information, interview processes, and more.
-            Employees can leave detailed reviews about their experiences working at a company, including the pros and
-            cons, advice to management, and overall ratings.
-            Users can find and share salary data for various positions within companies. This helps job seekers
-            understand the market rate for different roles and negotiate their salaries effectively.
-        </p>
+        <h2 class="text-center mt-3 mb-5">About Glassdoor</h2>
+        <div class="row" style="margin-bottom: 16px;">
+            <div class="col-md-6">
+                <p class="lead">
+                    Glassdoor is a website where current and former employees anonymously review companies. It provides a
+                    platform for job seekers to explore company cultures, salary information, interview processes, and more.
+                    Employees can leave detailed reviews about their experiences working at a company, including the pros and
+                    cons, advice to management, and overall ratings.
+                    Users can find and share salary data for various positions within companies. This helps job seekers
+                    understand the market rate for different roles and negotiate their salaries effectively.
+                </p>
+            </div>
+<div class=" d-none d-md-block col-md-3">
+    <img src="static\researchers-looking-alternative-energy-souces.jpg" style="border-radius: 10px;" height="260px" width="500px">
+
+</div>        </div>
         <h2 class="text-center mt-2 mb-2">Open Positions</h2>
         <div style="margin-bottom: 16px;" class="row ">
             {% for job in jobs %}
@@ -89,7 +96,7 @@
             </div>
             <div class="col-3 ">
                 <button style="padding: 1px 2px; font-size: 12px;" type="button"
-                    class="btn btn-outline-primary text-center">Apply</button>
+                    class="btn btn-outline-primary text-center"><a href="mailto:sreeshma@gmail.com?subject=Application for {{job['title']}}">Apply</a></button>
 
             </div>
             {% endfor %}
@@ -97,7 +104,11 @@
         <div style="text-align: center;">
             <button class="button1 mt-4 mb-4">Contact Us</button>
         </div>
+
+      
     </div>
+
+    {% include 'footer.html' %}
 </body>
 
 </html>
